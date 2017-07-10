@@ -1,7 +1,7 @@
 function Record(seed) {
     this.tags = {};
     this.seed = seed;
-    this.hash = 0;
+    this.hash = '0';
 }
 
 Record.prototype.setHash = function(hash) {
@@ -12,7 +12,7 @@ Record.prototype.add = function(key, value) {
     this.tags[key] = value;
 }
 
-Record.prototype.toString = function() {
+Record.prototype.toDict = function() {
     r = {"seed": this.seed, "prehash": this.hash, "tags": this.tags};
     return r;
 }
