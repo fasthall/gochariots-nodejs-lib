@@ -19,7 +19,7 @@ Node.js library for GoChariots
     var record2 = new Record(seed);
     record2.add('second', 'event');
     // Set the prerequisite hash of the second record
-    record2.setHash(hash1[0])
+    record2.addHash(hash1[0])
 
     // Post the records
     gochariots.post(record2)
